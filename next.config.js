@@ -18,6 +18,9 @@ module.exports = (phase) => {
         password_changepass: "7f3c430972c0df09d5c35c46e1fbb767",
         LOCALAPP_URL: "http://localhost:3000",
         LOSTNESTAPP_URL: "https://www.lostnest.xyz/",
+        GOOGLE_CLIENT_ID:
+          "516061693467-3bvi7iovs3arruo3iiafso1jqc3jbf4k.apps.googleusercontent.com",
+        GOOGLE_CLIENT_SECRET: "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",
       },
     };
   }
@@ -37,6 +40,9 @@ module.exports = (phase) => {
       password_changepass: "7f3c430972c0df09d5c35c46e1fbb767",
       LOCALAPP_URL: "http://localhost:3000",
       LOSTNESTAPP_URL: "https://www.lostnest.xyz/",
+      GOOGLE_CLIENT_ID:
+        "516061693467-3bvi7iovs3arruo3iiafso1jqc3jbf4k.apps.googleusercontent.com",
+      GOOGLE_CLIENT_SECRET: "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",
     },
   };
 };
