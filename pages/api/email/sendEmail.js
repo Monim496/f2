@@ -39,8 +39,8 @@ export default async function handler(req, res) {
   //   },
   // });
 
-  //const to = (await fetchallemails()).map((user) => user.email);
-  const to = "ghufran.chaudary12@gmail.com";
+  const to = (await fetchallemails()).map((user) => user.email);
+  //const to = "ghufran.chaudary12@gmail.com";
   // Set up email options
   const mailOptions = {
     from: emailsender,

@@ -5,7 +5,6 @@ import Head from "next/script";
 import { Fragment } from "react";
 import Link from "next/link";
 function Footer() {
-  
   return (
     <Fragment>
       <Head>
@@ -41,14 +40,21 @@ function Footer() {
                 <a className={classes.menulink}>Stats</a>
               </Link>
             </li>
+            <li className={classes.menuitem}>
+              <Link
+                href="https://uett-my.sharepoint.com/:t:/g/personal/20-se-34_students_uettaxila_edu_pk/EW7TH4JfZghGha5xyzS-WmEBlHE5hZhrS58gDs9368SOLQ?e=QNkeGL"
+                legacyBehavior
+              >
+                <a className={classes.menulink} target="_blank">Privacy Policy</a>
+              </Link>
+            </li>
           </ul>
-          <p
-         
-            className={classes.head2}
-          >
-            <b>Ghufran Ullah(20-SE-34) and Noman Shafique(20-SE-38) proudly present
-            their final year project under the supervision of Sir Mubbashir
-            Ayub.</b>
+          <p className={classes.head2}>
+            <b>
+              Ghufran Ullah(20-SE-34) and Noman Shafique(20-SE-38) proudly
+              present their final year project under the supervision of Sir
+              Mubbashir Ayub.
+            </b>
           </p>
         </div>
         <div className={classes.footerbg}>
