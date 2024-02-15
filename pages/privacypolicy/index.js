@@ -2,6 +2,7 @@ import { Fragment } from "react";
 
 import styles from "./PrivacyPolicy.module.css";
 import Head from "next/head";
+import Footer from "../../components/Global/Footer";
 
 function HomePage() {
   return (
@@ -19,7 +20,7 @@ function HomePage() {
         <h1>LostNest Privacy Policy</h1>
         <p>
           This document outlines the Privacy Policy for LostNest, the web
-          application developed by us. By using LostNest, you agree to the terms
+          application developed by our Team. By using LostNest, you agree to the terms
           outlined in this Privacy Policy.
         </p>
 
@@ -85,7 +86,7 @@ function HomePage() {
         <h2>Contact Us</h2>
         <p>
           If you have any questions about this Privacy Policy or the practices
-          of LostNest, please contact us at
+          of LostNest, please contact us at &nbsp;
           <a
             href="mailto:gcch1122@gmail.com"
             style={{ textDecoration: "underline" }}
@@ -95,6 +96,7 @@ function HomePage() {
           .
         </p>
       </div>
+      <Footer />
     </Fragment>
   );
 }

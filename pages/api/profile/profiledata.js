@@ -13,8 +13,10 @@ async function handler(req, res) {
     if (!session) {
       return res.status(401).json({ message: "Not authenticated!" });
     }
-    console.log(session);
-    //console.log(session.user.provider);
+    //console.log(session);
+    //console.log(session.user);
+
+
     if (session.user.image) {
       return res.status(200).json(session.user);
     }
