@@ -165,7 +165,7 @@ const FilteredPosts = () => {
         {pageHeadData}
         <ToastContainer autoClose={1500} draggable closeOnClick />
         <ErrorAlert>
-          <p>No events found for the chosen filter!</p>
+          <p>No posts found for the chosen filter!</p>
         </ErrorAlert>
         <div
           style={{
