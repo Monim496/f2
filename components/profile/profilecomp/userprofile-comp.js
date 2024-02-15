@@ -12,7 +12,7 @@ import { IoIosHome } from "react-icons/io";
 import { MdDashboard } from "react-icons/md";
 
 function PersonalProfile(props) {
-  
+
   return (
     <Fragment>
       <main className={classes.main}>
@@ -128,7 +128,7 @@ function PersonalProfile(props) {
                   <img
                     className={classes.formuserphoto}
                     src={
-                      props.image !== "undefined"
+                      props.image
                         ? props.image
                         : "/images/profileuser.png"
                     }
