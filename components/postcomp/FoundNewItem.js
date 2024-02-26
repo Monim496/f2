@@ -646,7 +646,7 @@ function FoundNewItem() {
       <form style={{ margin: "0px 5px 0px 5px" }} onSubmit={postSubmitHandler}>
         <div className="space-y-12">
           <div className="border-b border-gray-900/10 pb-12">
-            <h2 className="text-xl font-semibold leading-7 text-gray-900 text-2xl">
+            <h2 className="font-semibold leading-7 text-gray-900 text-3xl">
               Found an Item??
             </h2>
             <p className="mt-1 text-sm leading-6 text-red-600">
