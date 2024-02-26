@@ -6,7 +6,6 @@ import Footer from "../components/Global/Footer";
 import Head from "next/head";
 
 function HomePage() {
- 
   return (
     <Fragment>
       <Head>
@@ -24,4 +23,3 @@ function HomePage() {
 }
 
 export default HomePage;
-

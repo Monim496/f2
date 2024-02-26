@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 import classes from "./main-navigation.module.css";
@@ -31,12 +30,14 @@ function MainNavigation() {
             <h5>LostNest</h5>
           </div>
         </Link>
-        
-        <nav className={
-              showHam
-                ? `${classes.mainnav} ${classes.togglenav}`
-                : `${classes.mainnav}`
-            }>
+
+        <nav
+          className={
+            showHam
+              ? `${classes.mainnav} ${classes.togglenav}`
+              : `${classes.mainnav}`
+          }
+        >
           <ul className={classes.loginnav}>
             {status === "authenticated" && (
               <>
@@ -65,12 +66,12 @@ function MainNavigation() {
                 </li>
               </>
             )}
-            {status !== "authenticated"  && (
+            {status !== "authenticated" && (
               <li style={{ padding: "5px" }} className={classes.anch}>
-                              <Link href="/stats">Stats</Link>
-                             </li>
+                <Link href="/stats">Stats</Link>
+              </li>
             )}
-            {status !== "authenticated"  && (
+            {status !== "authenticated" && (
               <li>
                 <Link href="/auth" legacyBehavior>
                   <a>
@@ -79,18 +80,15 @@ function MainNavigation() {
                 </Link>
               </li>
             )}
-            
           </ul>
           {showHam && <p onClick={showHamBurger} className={classes.pa}></p>}
         </nav>
         <div className={classes.hamburger}>
-            <div onClick={showHamBurger}>
-              <GiHamburgerMenu />
-            </div>
+          <div onClick={showHamBurger}>
+            <GiHamburgerMenu />
           </div>
         </div>
-        
-     
+      </div>
     </header>
   );
 }

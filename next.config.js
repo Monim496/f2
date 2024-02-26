@@ -19,8 +19,8 @@ module.exports = (phase) => {
         LOCALAPP_URL: "http://localhost:3000",
         LOSTNESTAPP_URL: "https://www.lostnest.xyz/",
         GOOGLE_CLIENT_ID:
-          "516061693467-3bvi7iovs3arruo3iiafso1jqc3jbf4k.apps.googleusercontent.com",
-        GOOGLE_CLIENT_SECRET: "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",
+        "516061693467-3bvi7iovs3arruo3iiafso1jqc3jbf4k.apps.googleusercontent.com",
+      GOOGLE_CLIENT_SECRET: "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",
       },
     };
   }

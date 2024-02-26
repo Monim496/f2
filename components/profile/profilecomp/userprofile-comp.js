@@ -12,7 +12,7 @@ import { IoIosHome } from "react-icons/io";
 import { MdDashboard } from "react-icons/md";
 
 function PersonalProfile(props) {
-
+ 
   return (
     <Fragment>
       <main className={classes.main}>
