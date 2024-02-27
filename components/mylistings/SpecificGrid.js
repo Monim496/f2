@@ -1,11 +1,11 @@
 import React from "react";
-import Loading from "../UI/Loading";
 import Specificitem from "./SpecificItem";
+import ReactSpinner from "../UI/reactspinner";
 
 const SpecificGrid = (props) => {
   const { data } = props;
   if (!Array.isArray(data)) {
-    return <Loading />;
+    return <ReactSpinner isLoading={true} />;
   }
 
   return (

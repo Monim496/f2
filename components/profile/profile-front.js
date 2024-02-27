@@ -4,6 +4,7 @@ import Loading from "../UI/Loading";
 import PersonalProfile from "./profilecomp/userprofile-comp";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ReactSpinner from "../UI/reactspinner"
 
 function ProfileFront() {
   const [isData, setIsData] = useState("");
@@ -25,7 +26,7 @@ function ProfileFront() {
   }, []);
 
   if (isLoading) {
-    return <Loading />;
+    return <ReactSpinner isLoading={isLoading} />;
   }
 
   return (

@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 import { useEffect, useState } from "react";
-import Loading from "../UI/Loading";
 import ResponseGrid from "./ResponseGrid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ErrorAlert from "../UI/error-alert";
+import ReactSpinner from "../UI/reactspinner"
+
 
 const AllResponses = () => {
   const [isData, setIsData] = useState("");
@@ -63,7 +64,7 @@ const AllResponses = () => {
         ) : (
           <ResponseGrid data={isData} />
         )}
-        {isLoading && <Loading />}
+        {isLoading && <ReactSpinner isLoading={isLoading} />}
       </div>
     </Fragment>
   );

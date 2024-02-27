@@ -5,7 +5,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function ProfileForm() {
-  const [passwordChange, setIsPasswordChange] = useState(false);
   const [displayChange, setIsDisplayChange] = useState(false);
 
   const [passwordError, setPasswordError] = useState("");

@@ -3,9 +3,10 @@ import classes from "./ContactForm.module.css";
 import Button from "../UI/Button";
 import { useRef, useState } from "react";
 import Footer from "../Global/Footer";
-import ResponseLoading from "../notificationOverlay/ResponseLoad";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import ReactSpinner from "../UI/reactspinner";
 
 function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +29,6 @@ function ContactForm() {
       toast.error(data.message, { theme: "colored" });
 
       setIsLoading(false);
-     
     } else {
       toast.success("message submitted!", { theme: "colored" });
     }
@@ -45,15 +45,13 @@ function ContactForm() {
     const enteredName = contactNameInputRef.current.value;
 
     const result = await sendMessage(enteredEmail, enteredMessage, enteredName);
-    event.target.reset(); 
+    event.target.reset();
     setIsLoading(false);
-
   }
 
   if (isLoading) {
-    return <ResponseLoading con="Sending" />;
+    return <ReactSpinner isLoading={isLoading} />;
   }
-
 
   return (
     <Fragment>

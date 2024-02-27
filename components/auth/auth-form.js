@@ -1,14 +1,15 @@
 import { useState, useRef } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
-import Loading from "../UI/Loading";
 import Button from "../UI/Button";
 import classes from "./auth-form.module.css";
-import { Bounce, ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Fragment } from "react";
 import Footer from "../Global/Footer";
 import Link from "next/link";
+import ReactSpinner from "../UI/reactspinner";
+
 
 function AuthForm() {
   const [toggleForms, setToggleForms] = useState(false);
@@ -140,7 +141,7 @@ function AuthForm() {
   }
 
   if (isLoading) {
-    return <Loading />;
+    return <ReactSpinner isLoading={isLoading} />;
   }
 
   return (

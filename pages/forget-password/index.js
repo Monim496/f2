@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -29,6 +29,22 @@ async function forgetpassword(email) {
 function ForgetPassword() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    toast.info(
+      "If you are unable to find mail in inbox. Do check spam folder.",
+      {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      }
+    );
+  }, []);
 
   const submit = async (event) => {
     event.preventDefault();

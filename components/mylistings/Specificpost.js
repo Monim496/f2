@@ -6,6 +6,8 @@ import Loading from "../UI/Loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ErrorAlert from "../UI/error-alert";
+import ReactSpinner from "../UI/reactspinner"
+
 
 function Specificpost() {
   const [isData, setIsData] = useState("");
@@ -56,14 +58,14 @@ function Specificpost() {
       <div className="text-center mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12">
         {isData.length === 0 && !isLoading ? (
           <ErrorAlert>
-            <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl flex mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 justify-center items-center">
+            <p className="text-2xl md:text-3xl lg:text-2xl xl:text-2xl 2xl:text-2xl flex mt-4 md:mt-6 lg:mt-8 xl:mt-10 2xl:mt-12 justify-center items-center">
               You have not listed any posts
             </p>
           </ErrorAlert>
         ) : (
           <SpecificGrid data={isData} />
         )}
-        {isLoading && <Loading />}
+        {isLoading && <ReactSpinner isLoading={isLoading} />}
       </div>
     </Fragment>
   );

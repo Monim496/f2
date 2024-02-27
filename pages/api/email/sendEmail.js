@@ -17,7 +17,6 @@ export default async function handler(req, res) {
 
   const {
     subject,
-    message,
     enteredType,
     enteredCategory,
     Date,
@@ -27,7 +26,6 @@ export default async function handler(req, res) {
 
   const emailsender = "uettaxila@lostnest.xyz";
 
-  console.log("i am here-2");
   const html = render(
     NotifyEmail({
       enteredType,
@@ -47,13 +45,14 @@ export default async function handler(req, res) {
       pass: process.env.password_changepass,
     },
   });
+  
   // const transporter = nodemailer.createTransport({
-  //   port: 587,
+  //   port: 2525,
   //   secure: false,
-  //   host: process.env.password_changehost,
+  //   host: process.env.smtp_host,
   //   auth: {
-  //     user: process.env.password_changeusername,
-  //     pass: process.env.password_changepass,
+  //     user: process.env.smtp_user,
+  //     pass: process.env.smtp_pass,
   //   },
   // });
 

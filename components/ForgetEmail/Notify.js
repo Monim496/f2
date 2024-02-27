@@ -72,7 +72,7 @@ function NotifyEmail(props) {
           <Img
             src={`${url}/images/lost1.png`}
             width="170"
-            height="50"
+            height="170"
             alt="lostnest"
             style={logo}
           />
@@ -82,7 +82,7 @@ function NotifyEmail(props) {
               color: "#311465",
               fontFamily: "Arial, sans-serif",
               textAlign: "center",
-              fontSize: "4rem",
+              fontSize: "2.5rem",
             }}
           >
             LostNest

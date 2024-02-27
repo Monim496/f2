@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
 import { getSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import Loading from "../../components/UI/Loading";
 import { Fragment } from "react";
 import AuthForm from "../../components/auth/auth-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ReactSpinner from "../../components/UI/reactspinner";
+
 
 import Head from "next/head";
 function AuthPage() {
@@ -33,7 +34,7 @@ function AuthPage() {
   }, [router]);
 
   if (isLoading) {
-    return <Loading />;
+    return <ReactSpinner isLoading={isLoading} />;
   }
 
   return (
