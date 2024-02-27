@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Loading from "../UI/Loading";
 import Button from "../UI/Button";
 import classes from "./auth-form.module.css";
-import { ToastContainer, toast } from "react-toastify";
+import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Fragment } from "react";
 import Footer from "../Global/Footer";
@@ -28,10 +28,28 @@ function AuthForm() {
     const data = await response.json();
 
     if (!response.ok) {
-      toast.error(data.message, { theme: "colored" });
+      toast.error(data.message, {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       setIsLoading(false);
     } else {
-      toast.success(data.message, { theme: "colored" });
+      toast.success(data.message, {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
 
     return data;
@@ -72,11 +90,29 @@ function AuthForm() {
 
       if (!result.error) {
         router.replace("/dashboard");
-        toast.success("Success!", { theme: "colored" });
+        toast.success("Success!", {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         setIsLoading(false);
       }
       if (result.error) {
-        toast.error(result.error, { theme: "colored" });
+        toast.error(result.error, {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
         setIsLoading(false);
       }
     }
@@ -109,7 +145,7 @@ function AuthForm() {
 
   return (
     <Fragment>
-      <ToastContainer autoClose={1500} draggable closeOnClick />
+      <ToastContainer />
       <div className={classes.col1}>
         <div className={classes.formbox}>
           <div className={classes.form}>
@@ -142,7 +178,7 @@ function AuthForm() {
                   content="LOGIN"
                   onClick={switchAuthModeHandler}
                 ></Button>
-            
+
                 <p className={classes.message}>
                   Not Registered&nbsp;?&nbsp;
                   <a onClick={toggleForm} className={classes.link}>
@@ -238,9 +274,7 @@ function AuthForm() {
                     d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
                   ></path>
                 </svg>
-                <span style={{ fontSize: "1.5rem"}}>
-                  Login with Google
-                </span>
+                <span style={{ fontSize: "1.5rem" }}>Login with Google</span>
               </button>
             </div>
           </div>

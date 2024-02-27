@@ -16,7 +16,16 @@ function AuthPage() {
     getSession().then((session) => {
       if (session) {
         router.replace("/dashboard");
-        toast.success("You are authenticated", { theme: "colored" });
+        toast.success("You are authenticated", {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       } else {
         setIsLoading(false);
       }

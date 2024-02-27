@@ -43,7 +43,7 @@ export const authOptions = {
   callbacks: {
     async signIn({ user, account, profile }) {
       if (account.provider === "google") {
-        console.log("i am inside google");
+        //console.log("i am inside google");
         const client = await connectToDatabase();
 
         const db = client.db();
@@ -53,7 +53,6 @@ export const authOptions = {
           .findOne({ email: user.email });
 
         if (existingUser) {
-          
           return true;
         }
 
@@ -64,17 +63,15 @@ export const authOptions = {
 
         // console.log(user);
         // console.log(account);
-         //console.log(profile);
+        //console.log(profile);
       }
-      console.log("i am outside google");
-      console.log(profile);
+      // console.log("i am outside google");
+      // console.log(profile);
       return true;
     },
   },
   session: {
     maxAge: 30 * 60, // Set maxAge to 10 seconds
   },
-  
 };
 export default NextAuth(authOptions);
-
