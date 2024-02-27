@@ -81,7 +81,6 @@ function Forget(props) {
           </tr>
         </tbody>
       </table>
-      
 
       <div
         className="footer"
@@ -153,7 +152,7 @@ function Forget(props) {
                   color: "#311465",
                   fontSize: "16px",
                   textAlign: "center",
-                  textDecoration:"underline",
+                  textDecoration: "underline",
                 }}
               >
                 LostNest

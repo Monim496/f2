@@ -45,7 +45,7 @@ async function handler(req, res) {
     const html = render(
       Forget({
         url,
-        senderName
+        senderName,
       })
     );
 
@@ -60,7 +60,6 @@ async function handler(req, res) {
       },
     });
 
-  
     const to = userEmail;
     const subject = "LostNest - Password Reset Alert";
 

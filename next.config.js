@@ -16,6 +16,7 @@ module.exports = (phase) => {
         password_changehost: "live.smtp.mailtrap.io",
         password_changeusername: "api",
         password_changepass: "7f3c430972c0df09d5c35c46e1fbb767",
+        Email_bulkmailtrap: "bulk.smtp.mailtrap.io",
         LOCALAPP_URL: "http://localhost:3000",
         LOSTNESTAPP_URL: "https://www.lostnest.xyz/",
         GOOGLE_CLIENT_ID:
@@ -35,6 +36,7 @@ module.exports = (phase) => {
       smtp_user: "students.uettaxila.edu.pk",
       smtp_pass: "xCEEWP6kNjOzYDp7",
       NEXTAUTH_SECRET: "LlKq6ZtYbr+hTC073mAmAh9/h2HwMfsFo4hrfCx5mLg=",
+      Email_bulkmailtrap: "bulk.smtp.mailtrap.io",
       password_changehost: "live.smtp.mailtrap.io",
       password_changeusername: "api",
       password_changepass: "7f3c430972c0df09d5c35c46e1fbb767",

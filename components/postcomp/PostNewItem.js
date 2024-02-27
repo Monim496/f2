@@ -16,12 +16,25 @@ function PostNewItem() {
   const questionInputRef = useRef();
   const dateInputRef = useRef();
 
-  async function sendEmails(subject, message) {
+  async function sendEmails(
+    subject,
+    message,
+    enteredType,
+    enteredCategory,
+    Date,
+    enteredDescription,
+    enteredTitle
+  ) {
     const response = await fetch("/api/email/sendEmail", {
       method: "POST",
       body: JSON.stringify({
         subject,
         message,
+        enteredType,
+        enteredCategory,
+        Date,
+        enteredDescription,
+        enteredTitle,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +45,9 @@ function PostNewItem() {
 
     if (!response.ok) {
       setIsLoading(false);
-      toast.error("Error in sending email to registered users.", { theme: "colored" });
+      toast.error("Error in sending email to registered users.", {
+        theme: "colored",
+      });
     }
     if (data.success) {
       toast.success(data.message, { theme: "colored" });
@@ -622,7 +637,6 @@ function PostNewItem() {
 
     const subject = `LostNest Alert: ${enteredType} - ${enteredTitle}`;
 
-
     const result = await sendPostData(
       enteredType,
       enteredCategory,
@@ -634,7 +648,15 @@ function PostNewItem() {
     );
 
     if (result.message === "Item Posted Successfully!") {
-      const emailres = await sendEmails(subject, message);
+      const emailres = await sendEmails(
+        subject,
+        message,
+        enteredType,
+        enteredCategory,
+        humanReadableDate,
+        enteredDescription,
+        enteredTitle
+      );
     }
 
     if (result.message === "Item Posted Successfully!") {
@@ -695,9 +717,7 @@ function PostNewItem() {
                       required
                     >
                       <option value="Wallet">Wallet</option>
-                      <option value="Card">
-                        ID Card / Student Card
-                      </option>
+                      <option value="Card">ID Card / Student Card</option>
                       <option value="Phone or Laptop">
                         Smart Phone / Laptop
                       </option>
