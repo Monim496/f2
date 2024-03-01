@@ -97,6 +97,7 @@ function PostItem(props) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          marginTop: "2rem",
         }}
       >
         <Link href={detailLink} legacyBehavior>

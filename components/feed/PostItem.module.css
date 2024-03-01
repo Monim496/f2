@@ -9,8 +9,10 @@
   width: 80%;
   height: 25rem;
 
+  gap: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 .content {
@@ -33,6 +35,7 @@
 
     display: grid;
     grid-template-columns: 1fr;
+    padding: 4rem;
   }
 }
 
@@ -42,7 +45,8 @@
     height: auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 4rem;
   }
 }
 
@@ -52,9 +56,19 @@
     height: auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding: 4rem;
+   
   }
 }
 
 @media screen and (min-width: 1201px) {
+  .item {
+    width: 80%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+  }
 }
